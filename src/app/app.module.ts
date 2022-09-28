@@ -14,6 +14,7 @@ import { NewsComponent } from './news/news.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NewsComponent,
     ProfileComponent,
     FavoritesComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,

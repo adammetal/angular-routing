@@ -1,1 +1,9 @@
-<p>news works!</p>
+<h1>News list</h1>
+
+<h1 *ngIf="id">Selected: {{id}}</h1>
+
+<ul>
+  <li><button [routerLink]="['../', 2]" [queryParams]="{kek: 'lol'}" mat-raised-button>For 2</button></li>
+  <li><button [routerLink]="['../', 3]" mat-raised-button>For 3</button></li>
+  <li><button [routerLink]="['../', 4]" mat-raised-button>For 4</button></li>
+</ul>

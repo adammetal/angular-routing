@@ -1,0 +1,10 @@
+<mat-toolbar color="basic">
+  <button
+    *ngFor="let part of routerHistory.history"
+    mat-button
+    color="basic"
+    [routerLink]="[part.path, part.params]"
+  >
+    {{ part.title }}
+  </button>
+</mat-toolbar>

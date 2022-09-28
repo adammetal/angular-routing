@@ -9,19 +9,37 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, data: { parent: '' } },
   {
     path: 'home',
     component: HomeComponent,
+    data: { parent: '' },
     children: [
-      { path: 'news', component: NewsComponent },
-      { path: 'profile', component: ProfileComponent },
-      { path: 'favorites', component: FavoritesComponent },
+      {
+        path: 'news',
+        component: NewsComponent,
+        data: { parent: 'home' },
+      },
+      {
+        path: 'news/:id',
+        component: NewsComponent,
+        data: { parent: 'home' },
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent,
+        data: { parent: 'home' },
+      },
+      {
+        path: 'favorites',
+        component: FavoritesComponent,
+        data: { parent: 'home' },
+      },
     ],
   },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '**', component: NotfoundComponent },
+  { path: 'about', component: AboutComponent, data: { parent: '' } },
+  { path: 'contact', component: ContactComponent, data: { parent: '' } },
+  { path: '**', component: NotfoundComponent, data: { parent: '' } },
 ];
 
 @NgModule({
